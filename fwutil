@@ -1,0 +1,21 @@
+#!/bin/sh
+function get()
+{
+        script=$1
+        echo $script
+}
+function menu
+{
+  echo "1. upgradeFileWaveServerLinux.sh"
+  echo "2. backupServer.sh"
+}
+
+menu
+
+read -p "Enter the script number to download:" res
+case $res in
+        [1]* ) get "upgradeFileWaveServerLinux.sh";;
+        [2]* ) get "backupServer.sh";;
+        * ) echo "invalid entry.";;
+esac
+
